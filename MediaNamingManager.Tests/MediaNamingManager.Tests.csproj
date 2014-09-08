@@ -59,6 +59,7 @@
     <Compile Include="SeasonDashNumberAndNamerParserTest.cs" />
     <Compile Include="SeasonExEpisodeWithNameParserTests.cs" />
     <Compile Include="SimpleNumberedParserTests.cs" />
+    <Compile Include="SimpleNumberedWithEpisodeTextParserTests.cs" />
     <Compile Include="StripRubbishParserTests.cs" />
   </ItemGroup>
   <ItemGroup>

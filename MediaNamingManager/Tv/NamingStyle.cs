@@ -16,6 +16,8 @@ namespace MediaNamingManager
                 .RegisterType<IEpisodeParser, StripRubbishParser>("striprubbish")
                 .RegisterType<IEpisodeParser, SeasonExEpisodeWithNameParser>("exepisode")
                 .RegisterType<IEpisodeParser, EpiInNameParser>("epi")
+                .RegisterType<IEpisodeParser, SimpleNumberedWithEpisodeTextParser>("episodenumbered")
+
                 ;
         }
 
