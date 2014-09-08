@@ -3,7 +3,7 @@
 namespace MediaNamingManager.Tests
 {
     [TestFixture]
-    public class SimpleNumberedRenamerTests
+    public class SimpleNumberedParserTests
     {
         [Test]
         public void RenameToEpisode_SingleEpisodeSingleDigit_ReturnsString()

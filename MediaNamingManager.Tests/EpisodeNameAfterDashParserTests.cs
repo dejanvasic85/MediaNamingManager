@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace MediaNamingManager.Tests
 {
     [TestFixture]
-    public class EpisodeNameAfterDashRenamerTests
+    public class EpisodeNameAfterDashParserTests
     {
         [Test]
         public void RenameToEpisode_SingleEpisodeSingleDigit_ReturnsString()

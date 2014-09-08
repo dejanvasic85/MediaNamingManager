@@ -13,6 +13,7 @@ namespace MediaNamingManager
             Container.RegisterType<IEpisodeParser, EpisodeNameAfterDashParser>("nameafterdash");
             Container.RegisterType<IEpisodeParser, SimpleNumberedParser>("numbered");
             Container.RegisterType<IEpisodeParser, SeasonDashNumberAndNameParser>("seasondash");
+            Container.RegisterType<IEpisodeParser, StripRubbishParser>("striprubbish");
         }
 
         private IEpisodeParser Renamer { get; set; }

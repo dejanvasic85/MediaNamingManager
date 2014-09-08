@@ -56,6 +56,7 @@
     <Compile Include="Tv\NamingStrategy\IEpisodeParser.cs" />
     <Compile Include="Tv\NamingStrategy\SeasonDashNumberAndNameParser.cs" />
     <Compile Include="Tv\NamingStrategy\SimpleNumberedParser.cs" />
+    <Compile Include="Tv\NamingStrategy\StripRubbishParser.cs" />
     <Compile Include="Tv\NamingStyle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
