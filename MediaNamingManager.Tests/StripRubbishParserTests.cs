@@ -24,5 +24,15 @@ namespace MediaNamingManager.Tests
 
             Assert.That(result, Is.EqualTo("s05e10.mkv"));
         }
+
+        [Test]
+        public void RenameToEpisode_SingleEpisodeMultiDigitsWithUpperCasing_ReturnsString()
+        {
+            // arrange 
+            var renamer = new StripRubbishParser();
+            var result = renamer.RenameToEpisode(5, "dexter.S05E10.hdtv.xvid-2hd.mkv");
+
+            Assert.That(result, Is.EqualTo("S05E10.mkv"));
+        }
     }
 }
