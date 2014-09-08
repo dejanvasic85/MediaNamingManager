@@ -15,6 +15,7 @@ namespace MediaNamingManager
                 .RegisterType<IEpisodeParser, SeasonDashNumberAndNameParser>("seasondash")
                 .RegisterType<IEpisodeParser, StripRubbishParser>("striprubbish")
                 .RegisterType<IEpisodeParser, SeasonExEpisodeWithNameParser>("exepisode")
+                .RegisterType<IEpisodeParser, EpiInNameParser>("epi")
                 ;
         }
 
