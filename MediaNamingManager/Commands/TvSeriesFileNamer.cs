@@ -33,6 +33,8 @@ namespace MediaNamingManager
                 
                 file.MoveTo(Path.Combine(directory.FullName, targetName));
             }
+
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 

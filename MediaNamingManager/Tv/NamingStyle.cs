@@ -9,11 +9,13 @@ namespace MediaNamingManager
         static NamingStyle()
         {
             // Register all the names
-            Container = new UnityContainer();
-            Container.RegisterType<IEpisodeParser, EpisodeNameAfterDashParser>("nameafterdash");
-            Container.RegisterType<IEpisodeParser, SimpleNumberedParser>("numbered");
-            Container.RegisterType<IEpisodeParser, SeasonDashNumberAndNameParser>("seasondash");
-            Container.RegisterType<IEpisodeParser, StripRubbishParser>("striprubbish");
+            Container = new UnityContainer()
+                .RegisterType<IEpisodeParser, EpisodeNameAfterDashParser>("nameafterdash")
+                .RegisterType<IEpisodeParser, SimpleNumberedParser>("numbered")
+                .RegisterType<IEpisodeParser, SeasonDashNumberAndNameParser>("seasondash")
+                .RegisterType<IEpisodeParser, StripRubbishParser>("striprubbish")
+                .RegisterType<IEpisodeParser, SeasonExEpisodeWithNameParser>("exepisode")
+                ;
         }
 
         private IEpisodeParser Renamer { get; set; }

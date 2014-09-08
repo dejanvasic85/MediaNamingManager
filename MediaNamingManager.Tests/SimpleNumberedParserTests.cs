@@ -24,5 +24,16 @@ namespace MediaNamingManager.Tests
 
             Assert.That(result, Is.EqualTo("s10e10.mkv"));
         }
+        
+        [Test]
+        public void RenameToEpisode_SingleEpisodeSingleDigitWithEpisodeName_ReturnsString()
+        {
+            // arrange 
+            var renamer = new SimpleNumberedParser();
+            var result = renamer.RenameToEpisode(1, "101 - Death Has A Shadow.avi");
+
+            Assert.That(result, Is.EqualTo("s01e01 - Death Has A Shadow.avi"));
+        }
+
     }
 }
