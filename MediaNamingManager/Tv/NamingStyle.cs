@@ -10,15 +10,16 @@ namespace MediaNamingManager
         {
             // Register all the names
             Container = new UnityContainer();
-            Container.RegisterType<ITvRenamer, EpisodeNameAfterDashRenamer>("EpisodeAfterDash");
-            Container.RegisterType<ITvRenamer, SimpleIndexedRenamer>("simple");
+            Container.RegisterType<IEpisodeParser, EpisodeNameAfterDashParser>("nameafterdash");
+            Container.RegisterType<IEpisodeParser, SimpleNumberedParser>("numbered");
+            Container.RegisterType<IEpisodeParser, SeasonDashNumberAndNameParser>("seasondash");
         }
 
-        private ITvRenamer Renamer { get; set; }
+        private IEpisodeParser Renamer { get; set; }
 
         public NamingStyle(string styleName)
         {
-            this.Renamer = Container.Resolve<ITvRenamer>(styleName);
+            this.Renamer = Container.Resolve<IEpisodeParser>(styleName);
         }
 
         public string RenameToEpisode(int seasonNumber, string originalFileName, int? index = null)

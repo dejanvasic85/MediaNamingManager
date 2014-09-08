@@ -55,7 +55,8 @@
   <ItemGroup>
     <Compile Include="EpisodeNameAfterDashRenamer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleIndexedRenamerTests.cs" />
+    <Compile Include="SeasonDashNumberAndNamerParserTest.cs" />
+    <Compile Include="SimpleNumberedRenamerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

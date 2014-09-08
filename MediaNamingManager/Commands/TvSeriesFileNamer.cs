@@ -16,9 +16,11 @@ namespace MediaNamingManager
 
             NamingStyle targetNamingStyle = new NamingStyle(param["style"]);
 
-            for (int index = 0; index < directory.GetFiles().Length; index++)
+            var files = directory.GetFiles();
+
+            for (int index = 0; index < files.Length; index++)
             {
-                var file = directory.GetFiles()[index];
+                var file = files[index];
                 var targetName = targetNamingStyle.RenameToEpisode(seasonNumber, file.Name, index + 1);
 
                 if (file.Name.Equals(targetName))

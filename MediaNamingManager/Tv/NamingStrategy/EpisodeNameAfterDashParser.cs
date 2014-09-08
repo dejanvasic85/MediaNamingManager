@@ -1,6 +1,9 @@
 ﻿namespace MediaNamingManager
 {
-    public class EpisodeNameAfterDashRenamer : ITvRenamer
+    /// <summary>
+    /// Parses format Seinfeld Episode 01 - wahtevs.mks
+    /// </summary>
+    public class EpisodeNameAfterDashParser : IEpisodeParser
     {
         public string RenameToEpisode(int seasonNumber, string originalFileName, int? index = null)
         {
