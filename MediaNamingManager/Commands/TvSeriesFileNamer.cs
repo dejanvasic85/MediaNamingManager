@@ -6,12 +6,20 @@ using System.Linq;
 namespace MediaNamingManager
 {
 
-    public class TvSeriesFileNamer
+    public class TvEpisodeFileNamer
     {
 
         public void Rename(IDictionary<string, string> param)
         {
             var directory = new DirectoryInfo(param["dir"]);
+            if (!directory.Exists)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("The directory does not exist");
+                Console.ForegroundColor = ConsoleColor.White;
+                return;
+            }
+
             var seasonNumber = int.Parse(param["season"]);
 
             var targetNamingStyle = new NamingStyle(param["style"]);

@@ -6,7 +6,7 @@ namespace MediaNamingManager
     {
         static void Main(string[] args)
         {
-            TvSeriesFileNamer namer = new TvSeriesFileNamer();
+            TvEpisodeFileNamer namer = new TvEpisodeFileNamer();
 
             namer.Rename(new Dictionary<string, string>
             {
