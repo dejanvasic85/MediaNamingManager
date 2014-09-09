@@ -6,13 +6,13 @@ namespace MediaNamingManager.Tests
     public class EpiInNameParserTests
     {
         [Test]
-        public void RenameToEpisode_SingleEpisodeSingleDigit_ReturnsString()
+        public void RenameToEpisode_SingleEpisodeSingleDigitEpisodeNumber_ReturnsString()
         {
             // arrange 
             var renamer = new EpiInNameParser();
-            var result = renamer.RenameToEpisode(2, "Modern Family S02 Epi01 Pilot.avi");
+            var result = renamer.RenameToEpisode(2, "S02 Epi1 - My Overkill.avi");
 
-            Assert.That(result, Is.EqualTo("s02e01 - Pilot.avi"));
+            Assert.That(result, Is.EqualTo("s02e01 - My Overkill.avi"));
         }
 
         [Test]

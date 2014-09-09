@@ -5,7 +5,7 @@
     /// </summary>
     public class EpisodeNameAfterDashParser : IEpisodeParser
     {
-        public string RenameToEpisode(int seasonNumber, string originalFileName, int? index = null)
+        public string RenameToEpisode(int seasonNumber, string originalFileName)
         {
             var indexOfFirstDash = originalFileName.IndexOf('-');
             var episodeName = originalFileName.Substring(indexOfFirstDash).Replace("- ", "");

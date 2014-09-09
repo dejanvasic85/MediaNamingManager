@@ -5,7 +5,7 @@ namespace MediaNamingManager
     /// </summary>
     public class SeasonExEpisodeWithNameParser : IEpisodeParser
     {
-        public string RenameToEpisode(int seasonNumber, string originalFileName, int? index = null)
+        public string RenameToEpisode(int seasonNumber, string originalFileName)
         {
             // Find the first dash
             var dashIndex = originalFileName.IndexOf('-');

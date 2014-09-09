@@ -28,9 +28,9 @@ namespace MediaNamingManager
             this.Renamer = Container.Resolve<IEpisodeParser>(styleName);
         }
 
-        public string RenameToEpisode(int seasonNumber, string originalFileName, int? index = null)
+        public string RenameToEpisode(int seasonNumber, string originalFileName)
         {
-            return Renamer.RenameToEpisode(seasonNumber, originalFileName, index);
+            return Renamer.RenameToEpisode(seasonNumber, originalFileName);
         }
     }
 }

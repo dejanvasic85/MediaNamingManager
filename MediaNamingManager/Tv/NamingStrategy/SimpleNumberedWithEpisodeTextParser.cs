@@ -5,7 +5,7 @@ namespace MediaNamingManager
     /// </summary>
     public class SimpleNumberedWithEpisodeTextParser : IEpisodeParser
     {
-        public string RenameToEpisode(int seasonNumber, string originalFileName, int? index = null)
+        public string RenameToEpisode(int seasonNumber, string originalFileName)
         {
             var indexOfEpisodeText = originalFileName.IndexOf(string.Format("Episode {0}", seasonNumber));
 

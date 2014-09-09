@@ -14,14 +14,13 @@ namespace MediaNamingManager
             var directory = new DirectoryInfo(param["dir"]);
             var seasonNumber = int.Parse(param["season"]);
 
-            NamingStyle targetNamingStyle = new NamingStyle(param["style"]);
+            var targetNamingStyle = new NamingStyle(param["style"]);
 
             var files = directory.GetFiles();
 
-            for (int index = 0; index < files.Length; index++)
+            foreach (var file in files)
             {
-                var file = files[index];
-                var targetName = targetNamingStyle.RenameToEpisode(seasonNumber, file.Name, index + 1);
+                var targetName = targetNamingStyle.RenameToEpisode(seasonNumber, file.Name);
 
                 if (file.Name.Equals(targetName))
                     continue;
@@ -33,7 +32,7 @@ namespace MediaNamingManager
                 
                 file.MoveTo(Path.Combine(directory.FullName, targetName));
             }
-
+                
             Console.ForegroundColor = ConsoleColor.White;
         }
     }

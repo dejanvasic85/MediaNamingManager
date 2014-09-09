@@ -7,7 +7,7 @@ namespace MediaNamingManager
     /// </summary>
     public class SeasonDashNumberAndNameParser : IEpisodeParser
     {
-        public string RenameToEpisode(int seasonNumber, string originalFileName, int? index = null)
+        public string RenameToEpisode(int seasonNumber, string originalFileName)
         {
             // Strip out the season number
             var stripped = originalFileName.Substring(originalFileName.IndexOf('-') + 1);

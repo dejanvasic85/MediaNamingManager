@@ -5,7 +5,7 @@ namespace MediaNamingManager
     /// </summary>
     public class StripRubbishParser : IEpisodeParser
     {
-        public string RenameToEpisode(int seasonNumber, string originalFileName, int? index = null)
+        public string RenameToEpisode(int seasonNumber, string originalFileName)
         {
             var textToFind = string.Format("s{0}", seasonNumber.ToFriendlyName());
 
