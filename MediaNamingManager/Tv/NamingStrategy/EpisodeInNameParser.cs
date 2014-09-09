@@ -5,7 +5,7 @@ using System.Text;
 namespace MediaNamingManager
 {
     /// <summary>
-    /// Parses format of Modern Family S01 Epi01 Pilot.avi
+    /// Parses format of The Office Season 4 Episode 01.avi
     /// </summary>
     public class EpisodeInNameParser : IEpisodeParser
     {
