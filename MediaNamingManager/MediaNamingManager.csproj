@@ -53,7 +53,6 @@
     <Compile Include="StringExtensions.cs" />
     <Compile Include="Tv\NamingStrategy\EpiInNameParser.cs" />
     <Compile Include="Tv\NamingStrategy\EpisodeNameAfterDashParser.cs" />
-    <Compile Include="IntExtensions.cs" />
     <Compile Include="Tv\NamingStrategy\IEpisodeParser.cs" />
     <Compile Include="Tv\NamingStrategy\SeasonDashNumberAndNameParser.cs" />
     <Compile Include="Tv\NamingStrategy\SeasonExEpisodeWithNameParser.cs" />

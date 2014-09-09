@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MediaNamingManager
 {
-    public static class StringExtensions
+    public static class CustomExtensions
     {
         public static string FileExtension(this string fileName)
         {
@@ -12,16 +12,22 @@ namespace MediaNamingManager
             return fileName.Substring(idx);
         }
 
-        public static T FirstOrDefaultWithAction<T>(this IEnumerable<string> values, Func<string, bool> expression, Func<string, T> callback)
-            where T : class 
+        public static bool IsDigit(this string value)
         {
-            var first = values.FirstOrDefault(expression);
-
-            if (first == null)
-                return null;
-
-            return callback(first);
+            int parsed;
+            return int.TryParse(value, out parsed);
         }
-    }
 
+        public static string ToFriendlyName(this int number)
+        {
+            var str = number.ToString();
+            if (str.Length == 1)
+            {
+                // Should put in a zero in front to make it sortable in windows.
+                return string.Format("0{0}", str);
+            }
+            return str;
+        }
+
+    }
 }
