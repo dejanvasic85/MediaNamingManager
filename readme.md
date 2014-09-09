@@ -6,7 +6,7 @@ Coming soon (at chocolatey - most likely). Or just download the source, build in
 
 ### Tv Series File Namer ##
 
-Do you have episode file names that are incosistent and tools such as [Plex does not recognise it?](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)
+Do you have episode file names that are not cosistent and systems such as [Plex does not recognise it?](https://support.plex.tv/hc/en-us/articles/200220687-Naming-Series-Season-Based-TV-Shows)
 
 This command will rename your files in a target directory containing all episodes in a single season.
 
@@ -27,15 +27,11 @@ Below you will find all the currently supported source naming styles and the sui
 
 **Seinfeld Episode 01 - Pilot.avi** 
 
-Code name: **nameafterdash**
-
 
     MediaNamingManager.exe "C:\Senfield\Season 1" 1 nameafterdash
 
 
 **101.avi**
-
-Code name: **numbered**
 
 
     MediaNamingManager.exe "C:\Senfield\Season 1" 1 numbered
@@ -43,42 +39,30 @@ Code name: **numbered**
 
 **1-01 Pilot.avi**
 
-Code name: **seasondash**
-
 
     MediaNamingManager.exe "C:\Senfield\Season 1" 1 seasondash
 
 
 **Seinfeld.s01e01.pilot.hdtv.xvid-fqm.avi**
 
-Code name: **striprubbish**
-
 	MediaNamingManager.exe "C:\Senfield\Season 1" 1 striprubbish
 
 
 **Seinfeld 01x01 - Pilot.avi**
- 
-Code name: exepisode
 
 	MediaNamingManager.exe "C:\Senfield\Season 1" 1 exepisode
 
 **Seinfeld S01 Epi01 Pilot.avi**
  
-Code name: epi
-
 	MediaNamingManager.exe "C:\Senfield\Season 1" 1 epi
 
 
 **Episode 101 - Pilot.avi**
  
-Code name: episodenumbered
-
 	MediaNamingManager.exe "C:\Senfield\Season 1" 1 episodenumbered
 
 
 **Seinfeld Season 1 Episode 01.avi**
- 
-Code name: episodeInName
 
 	MediaNamingManager.exe "C:\Senfield\Season 1" 1 episodeInName
 
