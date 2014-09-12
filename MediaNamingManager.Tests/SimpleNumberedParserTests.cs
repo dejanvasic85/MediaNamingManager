@@ -35,5 +35,15 @@ namespace MediaNamingManager.Tests
             Assert.That(result, Is.EqualTo("s01e01 - Death Has A Shadow.avi"));
         }
 
+        [Test]
+        public void RenameToEpisode_TwoGuysAndGirl_ReturnsString()
+        {
+            // arrange 
+            var renamer = new SimpleNumberedParser();
+            var result = renamer.RenameToEpisode(1, "101.-.Two.Guys.a.Girl.-.The.Pilot.[Buck].avi");
+
+            Assert.That(result, Is.EqualTo("s01e01.avi"));
+        }
+
     }
 }
