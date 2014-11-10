@@ -16,11 +16,11 @@ namespace MediaNamingManager
                 indexOfSeasonNumber = originalFileName.IndexOf(textToFind.ToUpper());
             }
             
-
             var episode = originalFileName.Substring(indexOfSeasonNumber, 6);
 
             var result = string.Format("{0}{1}", episode, originalFileName.FileExtension());
             return result;
         }
     }
+
 }

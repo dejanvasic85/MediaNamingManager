@@ -22,25 +22,18 @@ namespace MediaNamingManager
 
             var seasonNumber = int.Parse(param["season"]);
 
-            var targetNamingStyle = new NamingStyle(param["style"]);
+            var namingStyle = param["style"];
 
-            var files = directory.GetFiles();
-
-            foreach (var file in files)
+            FileNameProcessor.ProcessFiles(namingStyle, directory.GetFiles().OrderBy(f => f.Name).ToArray(), seasonNumber, (originalFileName, targetFileName) =>
             {
-                var targetName = targetNamingStyle.RenameToEpisode(seasonNumber, file.Name);
-
-                if (file.Name.Equals(targetName))
-                    continue;
-
                 Console.ForegroundColor = ConsoleColor.Gray;
-                Console.WriteLine(file.Name);
+                Console.WriteLine(originalFileName.Name);
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(targetName);
-                
-                file.MoveTo(Path.Combine(directory.FullName, targetName));
-            }
-                
+                Console.WriteLine(targetFileName);
+
+                originalFileName.MoveTo(Path.Combine(directory.FullName, targetFileName));
+            });
+
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
