@@ -13,8 +13,7 @@ namespace MediaNamingManager
                 {"dir", args[0]},
                 {"season", args[1]},
                 {"style", args[2]}
-            }
-            );
+            });
         }
     }
 }
